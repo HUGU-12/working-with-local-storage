@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: borderbox;
+  font-family: sans-serif;
+}
+body{
+  background: url('/NBA-logo.jpg');
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body > :first-child{margin-bottom: 12px;}
+svg{
+  height: 120px;
+}
+.wrapper{
+  background: rgba(245, 245, 245, 0.817);
+  padding: 1.5rem;
+  width: 400px;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.527), inset 0 0 0 5px rgba(0, 0, 0, 0.237);
+  border-radius: 0.5rem;
+}
+
+h2{font-weight: 300; text-align: center;}
+
+.player-names{ list-style: none;}
+.player-names li{
+  border-bottom: solid 2px grey;
+  padding: 10px 0; font-size: 1.1rem;
+}
+label{cursor: pointer;}
+.player-names label::before{
+  content: '⚪';
+  margin-right: 12px;
+  cursor: pointer;
+}
+.player-names input:checked + label::before{
+  content: '🟢';
+}
+.player-names input{display:none};
+
+.add-players{
+  display: flex;  
+  width: 100%;
+  justify-content: space-between;
+}
+.add-players > *{
+  padding: 10px;
+  margin-top: 3px;
+}
+.add-players input[type='text']{
+  width: 65%;
+  margin-right: 10px;
+}
+
